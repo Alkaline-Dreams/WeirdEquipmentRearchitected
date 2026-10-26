@@ -41,6 +41,9 @@ public class WeirdEquipmentItems {
     public static final RegistrySupplier<Item> SELF_SLINGSHOT = register("self_slingshot", SelfSlingshotItem::new, p -> p
             .durability(350)
             .arch$tab(CreativeModeTabs.TOOLS_AND_UTILITIES));
+    public static final RegistrySupplier<Item> BLOCK_CANNON = register("block_cannon", BlockCannonItem::new, p -> p
+            .durability(640)
+            .arch$tab(CreativeModeTabs.TOOLS_AND_UTILITIES));
 
     public static final RegistrySupplier<Item> DIAMOND_SHEARS = register("diamond_shears", ShearsItem::new, p -> p
             .durability(1000)

@@ -7,6 +7,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import systems.alkaline.weirdequipment.WeirdEquipment;
+import systems.alkaline.weirdequipment.entity.BlockCannonShotEntity;
 import systems.alkaline.weirdequipment.entity.RopeCoilEntity;
 import systems.alkaline.weirdequipment.entity.TorchArrowEntity;
 
@@ -33,6 +34,16 @@ public class WeirdEquipmentEntityTypes {
                     .clientTrackingRange(4)
                     .updateInterval(10)
                     .build(key("rope_coil")));
+
+    public static final RegistrySupplier<EntityType<BlockCannonShotEntity>> BLOCK_CANNON_SHOT = ENTITY_TYPES.register("block_cannon_shot", () ->
+            EntityType.Builder.<BlockCannonShotEntity>of(BlockCannonShotEntity::new, MobCategory.MISC)
+                    .sized(0.6f, 0.6f)
+                    .noSave()
+                    .noSummon()
+                    .noLootTable()
+                    .clientTrackingRange(4)
+                    .updateInterval(10)
+                    .build(key("block_cannon_shot")));
 
     private static ResourceKey<EntityType<?>> key(String name) {
         return ResourceKey.create(Registries.ENTITY_TYPE, WeirdEquipment.id(name));

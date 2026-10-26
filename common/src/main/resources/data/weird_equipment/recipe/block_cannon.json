@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "TII",
+    "S S"
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "T": "minecraft:tnt",
+    "S": "minecraft:stick"
+  },
+  "result": { "id": "weird_equipment:block_cannon" }
+}
