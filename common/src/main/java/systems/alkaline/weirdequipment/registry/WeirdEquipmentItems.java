@@ -1,4 +1,4 @@
-package xyz.venividivivi.weirdequipment.registry;
+package systems.alkaline.weirdequipment.registry;
 
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
@@ -13,9 +13,9 @@ import net.minecraft.world.item.StandingAndWallBlockItem;
 import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.level.material.Fluids;
-import xyz.venividivivi.weirdequipment.WeirdEquipment;
-import xyz.venividivivi.weirdequipment.item.*;
-import xyz.venividivivi.weirdequipment.item.material.WeirdEquipmentMaterials;
+import systems.alkaline.weirdequipment.WeirdEquipment;
+import systems.alkaline.weirdequipment.item.*;
+import systems.alkaline.weirdequipment.item.material.WeirdEquipmentMaterials;
 
 import java.util.function.Function;
 import java.util.function.UnaryOperator;

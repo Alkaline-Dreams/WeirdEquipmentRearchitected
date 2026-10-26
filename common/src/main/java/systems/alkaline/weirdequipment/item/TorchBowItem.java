@@ -1,4 +1,4 @@
-package xyz.venividivivi.weirdequipment.item;
+package systems.alkaline.weirdequipment.item;
 
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
@@ -19,9 +19,9 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
-import xyz.venividivivi.weirdequipment.config.WeirdEquipmentConfig;
-import xyz.venividivivi.weirdequipment.entity.TorchArrowEntity;
-import xyz.venividivivi.weirdequipment.registry.WeirdEquipmentItems;
+import systems.alkaline.weirdequipment.config.WeirdEquipmentConfig;
+import systems.alkaline.weirdequipment.entity.TorchArrowEntity;
+import systems.alkaline.weirdequipment.registry.WeirdEquipmentItems;
 
 import java.util.List;
 import java.util.function.Predicate;

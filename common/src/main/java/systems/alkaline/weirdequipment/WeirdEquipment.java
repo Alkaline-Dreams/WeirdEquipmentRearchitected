@@ -1,13 +1,13 @@
-package xyz.venividivivi.weirdequipment;
+package systems.alkaline.weirdequipment;
 
 import dev.architectury.platform.Platform;
 import dev.architectury.utils.Env;
 import net.minecraft.resources.Identifier;
-import xyz.venividivivi.weirdequipment.config.WeirdEquipmentConfig;
-import xyz.venividivivi.weirdequipment.registry.WeirdEquipmentBlocks;
-import xyz.venividivivi.weirdequipment.registry.WeirdEquipmentEntityTypes;
-import xyz.venividivivi.weirdequipment.registry.WeirdEquipmentItems;
-import xyz.venividivivi.weirdequipment.registry.client.WeirdEquipmentEntityRenderers;
+import systems.alkaline.weirdequipment.config.WeirdEquipmentConfig;
+import systems.alkaline.weirdequipment.registry.WeirdEquipmentBlocks;
+import systems.alkaline.weirdequipment.registry.WeirdEquipmentEntityTypes;
+import systems.alkaline.weirdequipment.registry.WeirdEquipmentItems;
+import systems.alkaline.weirdequipment.registry.client.WeirdEquipmentEntityRenderers;
 
 public class WeirdEquipment {
     public static final String MOD_ID = "weird_equipment";

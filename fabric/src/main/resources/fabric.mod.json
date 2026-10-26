@@ -16,10 +16,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "xyz.venividivivi.weirdequipment.fabric.WeirdEquipmentFabric"
+      "systems.alkaline.weirdequipment.fabric.WeirdEquipmentFabric"
     ],
     "modmenu": [
-      "xyz.venividivivi.weirdequipment.fabric.addon.ModMenuAddon"
+      "systems.alkaline.weirdequipment.fabric.addon.ModMenuAddon"
     ]
   },
   "mixins": [

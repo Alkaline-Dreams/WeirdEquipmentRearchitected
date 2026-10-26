@@ -1,4 +1,4 @@
-package xyz.venividivivi.weirdequipment.fabric.mixin;
+package systems.alkaline.weirdequipment.fabric.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
@@ -6,7 +6,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.PumpkinBlock;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
-import xyz.venividivivi.weirdequipment.registry.WeirdEquipmentModTags;
+import systems.alkaline.weirdequipment.registry.WeirdEquipmentModTags;
 
 /** Lets any shears carve pumpkins, not just vanilla's. (NeoForge already does this.) */
 @Mixin(PumpkinBlock.class)

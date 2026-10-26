@@ -1,4 +1,4 @@
-package xyz.venividivivi.weirdequipment.item;
+package systems.alkaline.weirdequipment.item;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -13,7 +13,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.WallTorchBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
-import xyz.venividivivi.weirdequipment.config.WeirdEquipmentConfig;
+import systems.alkaline.weirdequipment.config.WeirdEquipmentConfig;
 
 /** A netherite pickaxe that places torches on right-click, at the cost of durability. */
 public class NetheriteTorchPickaxeItem extends Item {

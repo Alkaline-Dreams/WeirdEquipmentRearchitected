@@ -1,10 +1,10 @@
-package xyz.venividivivi.weirdequipment.neoforge;
+package systems.alkaline.weirdequipment.neoforge;
 
 import dev.architectury.platform.Platform;
 import dev.architectury.utils.Env;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
-import xyz.venividivivi.weirdequipment.WeirdEquipment;
+import systems.alkaline.weirdequipment.WeirdEquipment;
 
 @Mod(WeirdEquipment.MOD_ID)
 public final class WeirdEquipmentNeoForge {

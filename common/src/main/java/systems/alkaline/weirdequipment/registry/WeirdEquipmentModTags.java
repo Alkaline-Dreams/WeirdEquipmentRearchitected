@@ -1,10 +1,10 @@
-package xyz.venividivivi.weirdequipment.registry;
+package systems.alkaline.weirdequipment.registry;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import xyz.venividivivi.weirdequipment.WeirdEquipment;
+import systems.alkaline.weirdequipment.WeirdEquipment;
 
 public class WeirdEquipmentModTags {
     /** Convention tag shared by Fabric and NeoForge mods. */

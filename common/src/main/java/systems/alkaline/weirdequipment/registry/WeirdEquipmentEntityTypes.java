@@ -1,4 +1,4 @@
-package xyz.venividivivi.weirdequipment.registry;
+package systems.alkaline.weirdequipment.registry;
 
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
@@ -6,9 +6,9 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
-import xyz.venividivivi.weirdequipment.WeirdEquipment;
-import xyz.venividivivi.weirdequipment.entity.RopeCoilEntity;
-import xyz.venividivivi.weirdequipment.entity.TorchArrowEntity;
+import systems.alkaline.weirdequipment.WeirdEquipment;
+import systems.alkaline.weirdequipment.entity.RopeCoilEntity;
+import systems.alkaline.weirdequipment.entity.TorchArrowEntity;
 
 public class WeirdEquipmentEntityTypes {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(WeirdEquipment.MOD_ID, Registries.ENTITY_TYPE);

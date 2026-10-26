@@ -1,4 +1,4 @@
-package xyz.venividivivi.weirdequipment.mixin;
+package systems.alkaline.weirdequipment.mixin;
 
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -9,7 +9,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import org.spongepowered.asm.mixin.Mixin;
-import xyz.venividivivi.weirdequipment.registry.WeirdEquipmentItems;
+import systems.alkaline.weirdequipment.registry.WeirdEquipmentItems;
 
 /** Right-clicking an empty-handed zombie with a Dirt Sword hands the sword over. */
 @Mixin(Zombie.class)

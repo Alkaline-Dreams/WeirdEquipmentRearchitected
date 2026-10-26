@@ -1,4 +1,4 @@
-package xyz.venividivivi.weirdequipment.config;
+package systems.alkaline.weirdequipment.config;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

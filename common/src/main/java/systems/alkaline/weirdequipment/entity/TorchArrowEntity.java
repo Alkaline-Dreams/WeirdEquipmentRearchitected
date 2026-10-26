@@ -1,4 +1,4 @@
-package xyz.venividivivi.weirdequipment.entity;
+package systems.alkaline.weirdequipment.entity;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -19,8 +19,8 @@ import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import org.jspecify.annotations.Nullable;
-import xyz.venividivivi.weirdequipment.config.WeirdEquipmentConfig;
-import xyz.venividivivi.weirdequipment.registry.WeirdEquipmentEntityTypes;
+import systems.alkaline.weirdequipment.config.WeirdEquipmentConfig;
+import systems.alkaline.weirdequipment.registry.WeirdEquipmentEntityTypes;
 
 /** A torch fired from the Torch Bow. Places a torch where it lands, or sets mobs on fire. */
 public class TorchArrowEntity extends AbstractArrow {

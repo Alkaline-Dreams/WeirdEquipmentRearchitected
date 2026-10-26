@@ -1,4 +1,4 @@
-package xyz.venividivivi.weirdequipment.item;
+package systems.alkaline.weirdequipment.item;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.LivingEntity;

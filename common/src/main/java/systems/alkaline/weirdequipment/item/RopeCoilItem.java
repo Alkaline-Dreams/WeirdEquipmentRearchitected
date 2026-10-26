@@ -1,4 +1,4 @@
-package xyz.venividivivi.weirdequipment.item;
+package systems.alkaline.weirdequipment.item;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
@@ -11,7 +11,7 @@ import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import xyz.venividivivi.weirdequipment.entity.RopeCoilEntity;
+import systems.alkaline.weirdequipment.entity.RopeCoilEntity;
 
 /** A throwable coil holding {@link #count} ropes. Thrown like a snowball. */
 public class RopeCoilItem extends Item {

@@ -1,4 +1,4 @@
-package xyz.venividivivi.weirdequipment.config;
+package systems.alkaline.weirdequipment.config;
 
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;

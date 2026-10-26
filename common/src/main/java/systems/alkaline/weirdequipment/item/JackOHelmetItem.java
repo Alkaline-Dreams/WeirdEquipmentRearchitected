@@ -1,4 +1,4 @@
-package xyz.venividivivi.weirdequipment.item;
+package systems.alkaline.weirdequipment.item;
 
 import dev.architectury.platform.Platform;
 import net.minecraft.network.chat.Component;

@@ -1,6 +1,6 @@
-package xyz.venividivivi.weirdequipment.fabric;
+package systems.alkaline.weirdequipment.fabric;
 
-import xyz.venividivivi.weirdequipment.WeirdEquipment;
+import systems.alkaline.weirdequipment.WeirdEquipment;
 import net.fabricmc.api.ModInitializer;
 
 public class WeirdEquipmentFabric implements ModInitializer {

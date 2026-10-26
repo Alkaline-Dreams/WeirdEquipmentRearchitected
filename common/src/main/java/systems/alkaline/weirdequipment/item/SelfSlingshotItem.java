@@ -1,4 +1,4 @@
-package xyz.venividivivi.weirdequipment.item;
+package systems.alkaline.weirdequipment.item;
 
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -12,7 +12,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
-import xyz.venividivivi.weirdequipment.config.WeirdEquipmentConfig;
+import systems.alkaline.weirdequipment.config.WeirdEquipmentConfig;
 
 /** A slingshot that launches the player away from the block they're looking at. */
 public class SelfSlingshotItem extends BowItem {

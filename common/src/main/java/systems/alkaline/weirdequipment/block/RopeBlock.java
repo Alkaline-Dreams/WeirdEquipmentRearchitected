@@ -1,4 +1,4 @@
-package xyz.venividivivi.weirdequipment.block;
+package systems.alkaline.weirdequipment.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

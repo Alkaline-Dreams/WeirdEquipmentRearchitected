@@ -1,4 +1,4 @@
-package xyz.venividivivi.weirdequipment.item.material;
+package systems.alkaline.weirdequipment.item.material;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -9,8 +9,8 @@ import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.item.equipment.EquipmentAsset;
 import net.minecraft.world.item.equipment.EquipmentAssets;
-import xyz.venividivivi.weirdequipment.WeirdEquipment;
-import xyz.venividivivi.weirdequipment.registry.WeirdEquipmentModTags;
+import systems.alkaline.weirdequipment.WeirdEquipment;
+import systems.alkaline.weirdequipment.registry.WeirdEquipmentModTags;
 
 import java.util.Map;
 

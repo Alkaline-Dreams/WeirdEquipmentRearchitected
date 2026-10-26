@@ -1,9 +1,9 @@
-package xyz.venividivivi.weirdequipment.fabric.addon;
+package systems.alkaline.weirdequipment.fabric.addon;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
 import dev.architectury.platform.Platform;
-import xyz.venividivivi.weirdequipment.config.WeirdEquipmentConfigScreen;
+import systems.alkaline.weirdequipment.config.WeirdEquipmentConfigScreen;
 
 public class ModMenuAddon implements ModMenuApi {
     @Override

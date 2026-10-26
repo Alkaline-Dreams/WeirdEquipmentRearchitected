@@ -1,9 +1,9 @@
-package xyz.venividivivi.weirdequipment.registry.client;
+package systems.alkaline.weirdequipment.registry.client;
 
 import dev.architectury.registry.client.level.entity.EntityRendererRegistry;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
-import xyz.venividivivi.weirdequipment.entity.renderer.TorchArrowEntityRenderer;
-import xyz.venividivivi.weirdequipment.registry.WeirdEquipmentEntityTypes;
+import systems.alkaline.weirdequipment.entity.renderer.TorchArrowEntityRenderer;
+import systems.alkaline.weirdequipment.registry.WeirdEquipmentEntityTypes;
 
 public class WeirdEquipmentEntityRenderers {
     public static void register() {

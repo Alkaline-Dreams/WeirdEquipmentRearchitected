@@ -1,4 +1,4 @@
-package xyz.venividivivi.weirdequipment.registry;
+package systems.alkaline.weirdequipment.registry;
 
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
@@ -8,9 +8,9 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
-import xyz.venividivivi.weirdequipment.WeirdEquipment;
-import xyz.venividivivi.weirdequipment.block.RopeBlock;
-import xyz.venividivivi.weirdequipment.block.WallRopeBlock;
+import systems.alkaline.weirdequipment.WeirdEquipment;
+import systems.alkaline.weirdequipment.block.RopeBlock;
+import systems.alkaline.weirdequipment.block.WallRopeBlock;
 
 import java.util.function.Function;
 

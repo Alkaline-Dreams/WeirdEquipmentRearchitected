@@ -1,9 +1,9 @@
-package xyz.venividivivi.weirdequipment.neoforge;
+package systems.alkaline.weirdequipment.neoforge;
 
 import dev.architectury.platform.Platform;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
-import xyz.venividivivi.weirdequipment.config.WeirdEquipmentConfigScreen;
+import systems.alkaline.weirdequipment.config.WeirdEquipmentConfigScreen;
 
 /** Client-only setup. Kept separate so dedicated servers never load client classes. */
 final class WeirdEquipmentNeoForgeClient {

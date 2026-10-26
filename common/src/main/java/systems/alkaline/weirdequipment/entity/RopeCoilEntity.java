@@ -1,4 +1,4 @@
-package xyz.venividivivi.weirdequipment.entity;
+package systems.alkaline.weirdequipment.entity;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -14,11 +14,11 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.Vec3;
-import xyz.venividivivi.weirdequipment.block.WallRopeBlock;
-import xyz.venividivivi.weirdequipment.item.RopeCoilItem;
-import xyz.venividivivi.weirdequipment.registry.WeirdEquipmentBlocks;
-import xyz.venividivivi.weirdequipment.registry.WeirdEquipmentEntityTypes;
-import xyz.venividivivi.weirdequipment.registry.WeirdEquipmentItems;
+import systems.alkaline.weirdequipment.block.WallRopeBlock;
+import systems.alkaline.weirdequipment.item.RopeCoilItem;
+import systems.alkaline.weirdequipment.registry.WeirdEquipmentBlocks;
+import systems.alkaline.weirdequipment.registry.WeirdEquipmentEntityTypes;
+import systems.alkaline.weirdequipment.registry.WeirdEquipmentItems;
 
 /**
  * A thrown rope coil. When it hits a block it freezes in place and unrolls its ropes
