@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TTT",
+    "TDT",
+    "TTT"
+  ],
+  "key": {
+    "T": "minecraft:torch",
+    "D": "minecraft:diamond"
+  },
+  "result": { "id": "weird_equipment:torch_core" }
+}

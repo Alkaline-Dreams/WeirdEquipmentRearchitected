@@ -12,8 +12,7 @@
   "item.weird_equipment.dirt_sword": "Dirt Sword",
   "item.weird_equipment.flint_and_shears": "Flint and Shears",
   "item.weird_equipment.jack_o_helmet": "Jack o'Helmet",
-  "item.weird_equipment.jack_o_helmet.lambdynlights_warning.fabric": "Install LambDynamicLights or OptiFine to use this item!",
-  "item.weird_equipment.jack_o_helmet.lambdynlights_warning.forge": "Install Dynamic Lights or OptiFine to use this item!",
+  "item.weird_equipment.jack_o_helmet.dynamic_lights_warning": "Install LambDynamicLights to use this item!",
   "item.weird_equipment.large_lava_bucket": "Large Lava Bucket",
   "item.weird_equipment.large_rope_coil": "Large Rope Coil",
   "item.weird_equipment.netherite_torch_pickaxe": "Netherite Torch Pickaxe",
@@ -22,5 +21,7 @@
   "item.weird_equipment.small_rope_coil": "Small Rope Coil",
   "item.weird_equipment.torch_bow": "Torch Bow",
   "item.weird_equipment.torch_core": "Torch Core",
-  "item.weird_equipment.xl_rope_coil": "XL Rope Coil"
+  "item.weird_equipment.xl_rope_coil": "XL Rope Coil",
+  "tag.item.weird_equipment.cactus_tool_materials": "Cactus Tool Materials",
+  "tag.item.weird_equipment.repairs_pumpkin_armor": "Pumpkin Armor Repair Materials"
 }

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "weird_equipment:small_rope_coil",
+    "weird_equipment:small_rope_coil"
+  ],
+  "result": { "id": "weird_equipment:large_rope_coil" }
+}

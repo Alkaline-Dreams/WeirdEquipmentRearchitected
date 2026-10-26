@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GBG",
+    "SSS",
+    " S "
+  ],
+  "key": {
+    "S": "minecraft:stick",
+    "B": "minecraft:slime_ball",
+    "G": "minecraft:string"
+  },
+  "result": { "id": "weird_equipment:self_slingshot" }
+}

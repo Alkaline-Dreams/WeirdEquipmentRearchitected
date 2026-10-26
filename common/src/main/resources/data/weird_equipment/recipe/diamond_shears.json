@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " D",
+    "D "
+  ],
+  "key": {
+    "D": "minecraft:diamond"
+  },
+  "result": { "id": "weird_equipment:diamond_shears" }
+}

@@ -1,8 +1,8 @@
 # Weird Equipment Rearchitected
 ## A small Minecraft mod that adds somewhat strange (but useful!) equipment.
 ### This is a rewrite/port of [Weird Equipment](https://github.com/VioletRoses/WeirdEquipment), created to make exporting to Forge easier. At this point it is basically feature-complete.
-### Fabric: [LambDynamicLights](https://github.com/LambdAurora/LambDynamicLights) and [Cloth Config](https://github.com/shedaniel/cloth-config) are recommended for full functionality.
-### Forge: [OptiFine](https://optifine.net/downloads)/[RyoamicLights](https://modrinth.com/mod/ryoamiclights) and [Cloth Config](https://github.com/shedaniel/cloth-config) are recommended for full functionality.
+### Available for Fabric and NeoForge on Minecraft 26.3. Requires [Architectury API](https://modrinth.com/mod/architectury-api) (and [Fabric API](https://modrinth.com/mod/fabric-api) on Fabric).
+### [LambDynamicLights](https://github.com/LambdAurora/LambDynamicLights) and [Cloth Config](https://github.com/shedaniel/cloth-config) are recommended for full functionality.
 
 ### Currently, the mod includes the following:
 * Block Cannon: A cannon that shoots blocks held in the offhand, effectively increasing placement distance.

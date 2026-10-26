@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " C ",
+    " C ",
+    " S "
+  ],
+  "key": {
+    "C": "minecraft:cactus",
+    "S": "minecraft:stick"
+  },
+  "result": { "id": "weird_equipment:cactus_sword" }
+}

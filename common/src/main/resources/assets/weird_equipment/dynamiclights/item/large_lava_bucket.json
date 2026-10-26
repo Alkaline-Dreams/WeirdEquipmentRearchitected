@@ -1,4 +1,1 @@
-{
-  "item": "weird_equipment:large_lava_bucket",
-  "luminance": 10
-}
+{ "match": { "items": "weird_equipment:large_lava_bucket" }, "luminance": 10 }

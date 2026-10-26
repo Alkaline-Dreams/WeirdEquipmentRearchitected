@@ -1,0 +1,44 @@
+package xyz.venividivivi.weirdequipment.registry;
+
+import dev.architectury.registry.registries.DeferredRegister;
+import dev.architectury.registry.registries.RegistrySupplier;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
+import xyz.venividivivi.weirdequipment.WeirdEquipment;
+import xyz.venividivivi.weirdequipment.entity.RopeCoilEntity;
+import xyz.venividivivi.weirdequipment.entity.TorchArrowEntity;
+
+public class WeirdEquipmentEntityTypes {
+    public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(WeirdEquipment.MOD_ID, Registries.ENTITY_TYPE);
+
+    public static final RegistrySupplier<EntityType<TorchArrowEntity>> TORCH_ARROW = ENTITY_TYPES.register("torch_arrow", () ->
+            EntityType.Builder.<TorchArrowEntity>of(TorchArrowEntity::new, MobCategory.MISC)
+                    .sized(0.3f, 0.3f)
+                    .fireImmune()
+                    .noSave()
+                    .noSummon()
+                    .noLootTable()
+                    .clientTrackingRange(4)
+                    .updateInterval(20)
+                    .build(key("torch_arrow")));
+
+    public static final RegistrySupplier<EntityType<RopeCoilEntity>> ROPE_COIL = ENTITY_TYPES.register("rope_coil", () ->
+            EntityType.Builder.<RopeCoilEntity>of(RopeCoilEntity::new, MobCategory.MISC)
+                    .sized(0.3f, 0.3f)
+                    .noSave()
+                    .noSummon()
+                    .noLootTable()
+                    .clientTrackingRange(4)
+                    .updateInterval(10)
+                    .build(key("rope_coil")));
+
+    private static ResourceKey<EntityType<?>> key(String name) {
+        return ResourceKey.create(Registries.ENTITY_TYPE, WeirdEquipment.id(name));
+    }
+
+    public static void register() {
+        ENTITY_TYPES.register();
+    }
+}

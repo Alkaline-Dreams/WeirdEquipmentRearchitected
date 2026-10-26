@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GWG",
+    "GWG",
+    "GGG"
+  ],
+  "key": {
+    "G": "minecraft:gold_ingot",
+    "W": "minecraft:water_bucket"
+  },
+  "result": { "id": "weird_equipment:bottomless_water_bucket" }
+}

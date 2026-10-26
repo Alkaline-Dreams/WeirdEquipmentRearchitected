@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " D ",
+    " D ",
+    " S "
+  ],
+  "key": {
+    "D": "minecraft:dirt",
+    "S": "minecraft:stick"
+  },
+  "result": { "id": "weird_equipment:dirt_sword" }
+}

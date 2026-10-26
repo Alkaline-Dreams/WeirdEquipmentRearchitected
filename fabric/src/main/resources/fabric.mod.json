@@ -18,9 +18,6 @@
     "main": [
       "xyz.venividivivi.weirdequipment.fabric.WeirdEquipmentFabric"
     ],
-    "dynamiclights": [
-      "xyz.venividivivi.weirdequipment.fabric.addon.DynamicLightsAddon"
-    ],
     "modmenu": [
       "xyz.venividivivi.weirdequipment.fabric.addon.ModMenuAddon"
     ]
@@ -30,8 +27,15 @@
     "weirdequipment.fabric.mixins.json"
   ],
   "depends": {
-    "fabric": "*",
-    "minecraft": ">=1.20",
-    "architectury": ">=9.0.0"
+    "fabricloader": ">=0.20.1",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*",
+    "architectury": ">=22.0.5"
+  },
+  "suggests": {
+    "lambdynlights": "*",
+    "cloth-config": "*",
+    "modmenu": "*"
   }
 }

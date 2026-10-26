@@ -1,0 +1,52 @@
+modLoader = "javafml"
+loaderVersion = "[1,)"
+issueTrackerURL = "https://github.com/VioletRoses/WeirdEquipment/issues"
+license = "MIT"
+
+[[mods]]
+modId = "weird_equipment"
+version = "${version}"
+displayName = "Weird Equipment"
+authors = "VioletRoses"
+description = '''
+A collection of strange tools, weapons, and armor, meant to fit in with vanilla.
+'''
+iconFile = "icon.png"
+
+[[dependencies.weird_equipment]]
+modId = "neoforge"
+type = "required"
+versionRange = "[26.3.0,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.weird_equipment]]
+modId = "minecraft"
+type = "required"
+versionRange = "[26.3,26.4)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.weird_equipment]]
+modId = "architectury"
+type = "required"
+versionRange = "[22.0.5,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.weird_equipment]]
+modId = "lambdynlights"
+type = "optional"
+versionRange = "*"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.weird_equipment]]
+modId = "cloth_config"
+type = "optional"
+versionRange = "*"
+ordering = "NONE"
+side = "CLIENT"
+
+[[mixins]]
+config = "weirdequipment.common.mixins.json"

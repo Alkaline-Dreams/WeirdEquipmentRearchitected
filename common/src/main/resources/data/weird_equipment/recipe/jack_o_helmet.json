@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "JJJ",
+    "JIJ",
+    "   "
+  ],
+  "key": {
+    "J": "minecraft:jack_o_lantern",
+    "I": "minecraft:iron_helmet"
+  },
+  "result": { "id": "weird_equipment:jack_o_helmet" }
+}

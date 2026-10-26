@@ -1,4 +1,1 @@
-{
-  "item": "weird_equipment:netherite_torch_pickaxe",
-  "luminance": 14
-}
+{ "match": { "items": "weird_equipment:netherite_torch_pickaxe" }, "luminance": 14 }

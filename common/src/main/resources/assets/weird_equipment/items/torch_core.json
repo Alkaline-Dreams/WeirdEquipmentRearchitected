@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "weird_equipment:item/torch_core"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:netherite_pickaxe",
+    "weird_equipment:torch_core"
+  ],
+  "result": { "id": "weird_equipment:netherite_torch_pickaxe" }
+}

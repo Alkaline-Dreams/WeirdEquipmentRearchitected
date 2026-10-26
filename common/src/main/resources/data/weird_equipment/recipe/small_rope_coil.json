@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RRR",
+    "RRR",
+    "RRR"
+  ],
+  "key": {
+    "R": "weird_equipment:rope"
+  },
+  "result": { "id": "weird_equipment:small_rope_coil" }
+}

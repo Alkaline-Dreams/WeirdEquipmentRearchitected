@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "SLS",
+    " S "
+  ],
+  "key": {
+    "S": "minecraft:string",
+    "L": "minecraft:leather"
+  },
+  "result": { "id": "weird_equipment:rope", "count": 24 }
+}

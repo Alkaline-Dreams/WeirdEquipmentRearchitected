@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:flint",
+    "minecraft:shears"
+  ],
+  "result": { "id": "weird_equipment:flint_and_shears" }
+}

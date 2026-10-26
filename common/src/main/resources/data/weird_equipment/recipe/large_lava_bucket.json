@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LLL",
+    "LLL",
+    "LLL"
+  ],
+  "key": {
+    "L": "minecraft:lava_bucket"
+  },
+  "result": { "id": "weird_equipment:large_lava_bucket" }
+}

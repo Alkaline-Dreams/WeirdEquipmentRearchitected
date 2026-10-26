@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TTT",
+    "TBT",
+    "TTT"
+  ],
+  "key": {
+    "T": "minecraft:torch",
+    "B": "minecraft:bow"
+  },
+  "result": { "id": "weird_equipment:torch_bow" }
+}

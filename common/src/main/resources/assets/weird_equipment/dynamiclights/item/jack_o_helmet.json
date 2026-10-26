@@ -1,4 +1,1 @@
-{
-  "item": "weird_equipment:jack_o_helmet",
-  "luminance": 14
-}
+{ "match": { "items": "weird_equipment:jack_o_helmet" }, "luminance": 14 }
