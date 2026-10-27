@@ -24,7 +24,6 @@ public class WeirdEquipmentBlocks {
         return BLOCKS.register(name, () -> factory.apply(BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, WeirdEquipment.id(name)))
                 .mapColor(MapColor.COLOR_BROWN)
-                .dynamicShape()
                 .sound(SoundType.WOOL)));
     }
 

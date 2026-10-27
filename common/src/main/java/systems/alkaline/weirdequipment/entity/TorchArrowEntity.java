@@ -64,8 +64,14 @@ public class TorchArrowEntity extends AbstractArrow {
             int fireSeconds = this.isOnFire() ? FLAME_FIRE_SECONDS : FIRE_SECONDS;
             // Vanilla arrow damage, so Power, Punch and crits still apply.
             super.onHitEntity(hitResult);
-            entity.igniteForSeconds(fireSeconds);
-        } else if (this.level() instanceof ServerLevel level) {
+            // Vanilla removes the arrow once the hit lands. If it's still here it was deflected
+            // (an enderman, a blocked hit) and keeps flying, so it can still land as a torch.
+            if (this.isRemoved()) {
+                entity.igniteForSeconds(fireSeconds);
+            }
+            return;
+        }
+        if (this.level() instanceof ServerLevel level) {
             this.dropTorch(level);
         }
         this.discard();

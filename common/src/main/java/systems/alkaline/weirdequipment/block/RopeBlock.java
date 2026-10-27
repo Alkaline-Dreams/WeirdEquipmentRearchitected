@@ -31,14 +31,23 @@ public class RopeBlock extends Block {
 
     @Override
     protected void neighborChanged(BlockState state, Level level, BlockPos pos, Block block, @Nullable Orientation orientation, boolean movedByPiston) {
-        if (!state.canSurvive(level, pos)) {
-            level.scheduleTick(pos, this, 1);
-        }
+        breakNextTickIfUnsupported(state, level, pos);
         super.neighborChanged(state, level, pos, block, orientation, movedByPiston);
     }
 
     @Override
     protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
+        breakIfUnsupported(state, level, pos);
+    }
+
+    // Shared with WallRopeBlock. Breaking a tick later makes a long rope fall away one piece at a time.
+    static void breakNextTickIfUnsupported(BlockState state, Level level, BlockPos pos) {
+        if (!state.canSurvive(level, pos)) {
+            level.scheduleTick(pos, state.getBlock(), 1);
+        }
+    }
+
+    static void breakIfUnsupported(BlockState state, ServerLevel level, BlockPos pos) {
         if (!state.canSurvive(level, pos)) {
             level.destroyBlock(pos, true);
         }

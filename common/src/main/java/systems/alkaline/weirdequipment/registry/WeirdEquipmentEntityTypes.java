@@ -18,7 +18,6 @@ public class WeirdEquipmentEntityTypes {
             EntityType.Builder.<TorchArrowEntity>of(TorchArrowEntity::new, MobCategory.MISC)
                     .sized(0.3f, 0.3f)
                     .fireImmune()
-                    .noSave()
                     .noSummon()
                     .noLootTable()
                     .clientTrackingRange(4)
@@ -28,7 +27,6 @@ public class WeirdEquipmentEntityTypes {
     public static final RegistrySupplier<EntityType<RopeCoilEntity>> ROPE_COIL = ENTITY_TYPES.register("rope_coil", () ->
             EntityType.Builder.<RopeCoilEntity>of(RopeCoilEntity::new, MobCategory.MISC)
                     .sized(0.3f, 0.3f)
-                    .noSave()
                     .noSummon()
                     .noLootTable()
                     .clientTrackingRange(4)
@@ -38,7 +36,6 @@ public class WeirdEquipmentEntityTypes {
     public static final RegistrySupplier<EntityType<BlockCannonShotEntity>> BLOCK_CANNON_SHOT = ENTITY_TYPES.register("block_cannon_shot", () ->
             EntityType.Builder.<BlockCannonShotEntity>of(BlockCannonShotEntity::new, MobCategory.MISC)
                     .sized(0.6f, 0.6f)
-                    .noSave()
                     .noSummon()
                     .noLootTable()
                     .clientTrackingRange(4)

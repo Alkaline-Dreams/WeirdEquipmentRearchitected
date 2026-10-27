@@ -11,6 +11,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.Vec3;
@@ -22,13 +24,12 @@ import systems.alkaline.weirdequipment.registry.WeirdEquipmentItems;
 
 /**
  * A thrown rope coil. When it hits a block it freezes in place and unrolls its ropes
- * downward one at a time. The thrown item is synced to clients by the parent class, which
- * picks the right sprite.
+ * downward one at a time.
  */
 public class RopeCoilEntity extends ThrowableItemProjectile {
     private static final int TICKS_PER_ROPE = 3;
 
-    private boolean isPlacing = false;
+    /** The lowest rope placed so far, or null while the coil is still flying. */
     private BlockPos ropePos = null;
     private int ticksUntilNextRope = 0;
     private int ropesLeft = 0;
@@ -44,10 +45,14 @@ public class RopeCoilEntity extends ThrowableItemProjectile {
         }
     }
 
+    private boolean isPlacing() {
+        return ropePos != null;
+    }
+
     @Override
     protected void onHitBlock(BlockHitResult hitResult) {
         // Once frozen in place, ignore further hits.
-        if (isPlacing || !(this.level() instanceof ServerLevel level)) return;
+        if (isPlacing() || !(this.level() instanceof ServerLevel level)) return;
 
         Direction side = hitResult.getDirection();
         BlockPos pos = hitResult.getBlockPos().relative(side);
@@ -67,7 +72,6 @@ public class RopeCoilEntity extends ThrowableItemProjectile {
         level.setBlockAndUpdate(pos, rope);
         ropesLeft--;
         ropePos = pos;
-        isPlacing = true;
 
         // Freeze the projectile in place while the remaining ropes unroll in tick().
         this.setNoGravity(true);
@@ -83,7 +87,7 @@ public class RopeCoilEntity extends ThrowableItemProjectile {
 
     @Override
     public void tick() {
-        if (isPlacing && this.level() instanceof ServerLevel level) {
+        if (isPlacing() && this.level() instanceof ServerLevel level) {
             if (ticksUntilNextRope > 0) {
                 ticksUntilNextRope--;
             } else {
@@ -114,6 +118,22 @@ public class RopeCoilEntity extends ThrowableItemProjectile {
     private void dropCoil(ServerLevel level) {
         this.spawnAtLocation(level, this.getItem().copy());
         this.discard();
+    }
+
+    @Override
+    protected void addAdditionalSaveData(ValueOutput output) {
+        super.addAdditionalSaveData(output);
+        output.putInt("ropes_left", ropesLeft);
+        output.putInt("ticks_until_next_rope", ticksUntilNextRope);
+        output.storeNullable("rope_pos", BlockPos.CODEC, ropePos);
+    }
+
+    @Override
+    protected void readAdditionalSaveData(ValueInput input) {
+        super.readAdditionalSaveData(input);
+        ropesLeft = input.getIntOr("ropes_left", 0);
+        ticksUntilNextRope = input.getIntOr("ticks_until_next_rope", 0);
+        ropePos = input.read("rope_pos", BlockPos.CODEC).orElse(null);
     }
 
     @Override

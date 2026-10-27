@@ -52,17 +52,13 @@ public class WallRopeBlock extends HorizontalDirectionalBlock {
 
     @Override
     protected void neighborChanged(BlockState state, Level level, BlockPos pos, Block block, @Nullable Orientation orientation, boolean movedByPiston) {
-        if (!state.canSurvive(level, pos)) {
-            level.scheduleTick(pos, this, 1);
-        }
+        RopeBlock.breakNextTickIfUnsupported(state, level, pos);
         super.neighborChanged(state, level, pos, block, orientation, movedByPiston);
     }
 
     @Override
     protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-        if (!state.canSurvive(level, pos)) {
-            level.destroyBlock(pos, true);
-        }
+        RopeBlock.breakIfUnsupported(state, level, pos);
     }
 
     @Override

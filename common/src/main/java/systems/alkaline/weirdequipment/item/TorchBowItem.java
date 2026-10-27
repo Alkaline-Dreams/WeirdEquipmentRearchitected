@@ -69,7 +69,6 @@ public class TorchBowItem extends BowItem {
         boolean fromPickaxe = false;
         List<ItemStack> projectiles;
         if (!ammo.isEmpty() && !infinite) {
-            // Uses up a torch (except in creative).
             projectiles = draw(bow, ammo, player);
         } else if (infinite) {
             projectiles = List.of(freeTorch());

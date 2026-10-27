@@ -23,7 +23,7 @@ import java.util.function.UnaryOperator;
 public class WeirdEquipmentItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(WeirdEquipment.MOD_ID, Registries.ITEM);
 
-    public static final RegistrySupplier<Item> JACK_O_HELMET = register("jack_o_helmet", JackOHelmetItem::new, p -> p
+    public static final RegistrySupplier<Item> JACK_O_HELMET = register("jack_o_helmet", Item::new, p -> p
             .humanoidArmor(WeirdEquipmentMaterials.PUMPKIN, ArmorType.HELMET)
             .arch$tab(CreativeModeTabs.COMBAT));
 

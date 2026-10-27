@@ -15,7 +15,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.HitResult;
 import systems.alkaline.weirdequipment.entity.BlockCannonShotEntity;
 
-// Fires the block held in the off-hand; it's placed wherever it lands.
+/** Fires the block held in the off-hand; it's placed wherever it lands. */
 public class BlockCannonItem extends Item {
     private static final float SHOT_VELOCITY = 4.5f;
 
@@ -27,7 +27,8 @@ public class BlockCannonItem extends Item {
     public InteractionResult use(Level level, Player player, InteractionHand hand) {
         ItemStack ammo = player.getOffhandItem();
         // Only fire past normal reach; up close the off-hand block is placed the usual way.
-        if (hand != InteractionHand.MAIN_HAND || !(ammo.getItem() instanceof BlockItem)
+        // Players who can't build (adventure, spectator) can't fire at all.
+        if (hand != InteractionHand.MAIN_HAND || !player.mayBuild() || !(ammo.getItem() instanceof BlockItem)
                 || player.pick(player.blockInteractionRange(), 0.0f, false).getType() == HitResult.Type.BLOCK) {
             return InteractionResult.PASS;
         }

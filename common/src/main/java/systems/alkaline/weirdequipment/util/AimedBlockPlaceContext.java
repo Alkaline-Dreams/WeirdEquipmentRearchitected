@@ -1,5 +1,7 @@
 package systems.alkaline.weirdequipment.util;
 
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.LivingEntity;
@@ -9,8 +11,12 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.BlockHitResult;
 
-//  A block placement context captured from a player and stored for future use,
-//  instead of being read from the live player. Used for block cannon's placement.
+import java.util.Arrays;
+
+/**
+ * A block placement context captured from a player and stored for future use,
+ * instead of being read from the live player. Used for block cannon's placement.
+ */
 public class AimedBlockPlaceContext extends BlockPlaceContext {
     private final Aim aim;
 
@@ -62,6 +68,15 @@ public class AimedBlockPlaceContext extends BlockPlaceContext {
 
     /** The answers vanilla gives for an entity's look at one moment. */
     public record Aim(Direction[] nearest, Direction horizontal, Direction vertical, float yRot, boolean secondaryUse) {
+        public static final Codec<Aim> CODEC = RecordCodecBuilder.create(instance -> instance.group(
+                Direction.CODEC.listOf(6, 6).xmap(list -> list.toArray(Direction[]::new), Arrays::asList)
+                        .fieldOf("nearest").forGetter(Aim::nearest),
+                Direction.CODEC.fieldOf("horizontal").forGetter(Aim::horizontal),
+                Direction.CODEC.fieldOf("vertical").forGetter(Aim::vertical),
+                Codec.FLOAT.fieldOf("y_rot").forGetter(Aim::yRot),
+                Codec.BOOL.fieldOf("secondary_use").forGetter(Aim::secondaryUse)
+        ).apply(instance, Aim::new));
+
         public static Aim capture(LivingEntity entity) {
             return new Aim(
                     Direction.orderedByNearest(entity),

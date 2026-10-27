@@ -1,8 +1,9 @@
 package systems.alkaline.weirdequipment.item;
 
+import net.minecraft.network.protocol.game.ClientboundSetEntityMotionPacket;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
@@ -11,18 +12,14 @@ import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.HitResult;
-import net.minecraft.world.phys.Vec3;
 import systems.alkaline.weirdequipment.config.WeirdEquipmentConfig;
 
 /** A slingshot that launches the player away from the block they're looking at. */
 public class SelfSlingshotItem extends BowItem {
-    private static final double MAX_REACH = 5.0;
-
     public SelfSlingshotItem(Properties properties) {
         super(properties);
     }
 
-    // Runs on both sides: the client moves the player, the server handles durability.
     @Override
     public boolean releaseUsing(ItemStack itemStack, Level level, LivingEntity entity, int remainingTime) {
         if (!(entity instanceof Player player)) {
@@ -35,14 +32,14 @@ public class SelfSlingshotItem extends BowItem {
         }
 
         float soundPitch = 0.05f;
-        if (player.pick(MAX_REACH, 0, false).getType() == HitResult.Type.BLOCK) {
-            power *= WeirdEquipmentConfig.SELF_SLINGSHOT_VELOCITY;
-            float yaw = player.getYRot() * Mth.DEG_TO_RAD;
-            float pitch = player.getXRot() * Mth.DEG_TO_RAD;
-            Vec3 look = new Vec3(-Mth.sin(yaw) * Mth.cos(pitch), -Mth.sin(pitch), Mth.cos(yaw) * Mth.cos(pitch)).normalize();
-            player.setDeltaMovement(look.multiply(-2.25 * power, -1.25 * power, -2.25 * power));
-
-            itemStack.hurtAndBreak(1, player, player.getUsedItemHand());
+        if (player.pick(player.blockInteractionRange(), 0, false).getType() == HitResult.Type.BLOCK) {
+            // The server launches the player and sends them the new motion, so the server's config decides the strength.
+            if (player instanceof ServerPlayer serverPlayer) {
+                double strength = power * WeirdEquipmentConfig.SELF_SLINGSHOT_VELOCITY;
+                player.setDeltaMovement(player.getLookAngle().multiply(-2.25 * strength, -1.25 * strength, -2.25 * strength));
+                serverPlayer.connection.send(new ClientboundSetEntityMotionPacket(player));
+                itemStack.hurtAndBreak(1, player, player.getUsedItemHand());
+            }
             soundPitch = 1.0f;
         }
         level.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.ARROW_SHOOT, SoundSource.PLAYERS,
